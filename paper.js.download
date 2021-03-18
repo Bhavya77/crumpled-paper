@@ -1,0 +1,32 @@
+class paper{
+
+    constructor(x,y){
+        
+       var options={
+
+        density:1.2,
+        isStatic:false,
+        restitution:0.3,
+        friction:0.5,
+
+       }
+
+       this.image = loadImage("paper.png");
+
+        this.body=Bodies.rectangle(x,y,30,30)
+        World.add(world,this.body)
+        this.width=50
+        this.height=50
+
+        
+    }
+    display(){
+        var pos=this.body.position
+        imageMode(CENTER)
+     
+       
+   image(this.image,pos.x,pos.y,this.width,this.height)
+
+    }
+ 
+}
